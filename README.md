@@ -73,3 +73,25 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+### ====================================================== ###
+ > add config
+    alias: {
+        '@' : resolve(__dirname, '')
+    },
+
+1. Create folder assets > create file main.scss
+2. npm i sass
+3. file nuxt.config.ts
+    > add config
+        css: ['~/assets/main.scss']
+4. Setup tailwind CSS
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+    > file `nuxt.config.ts` add config:
+        postcss: {
+            plugins: {
+                tailwindcss: {},
+                autoprefixer: {},
+            },
+        },
