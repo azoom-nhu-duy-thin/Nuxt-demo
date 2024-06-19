@@ -3,14 +3,15 @@
     <NuxtRouteAnnouncer />
     <!-- <NuxtWelcome /> -->
      <NuxtLayout >
-      <header>
+      <!-- <header>
         <ul>
           <li>
             <NuxtLink to="/">Home</NuxtLink>
             <NuxtLink to="/events">Events</NuxtLink>
           </li>
         </ul>
-      </header>
+      </header> -->
+      <!-- <Header /> -->
       <NuxtPage />
      </NuxtLayout>
   </div>
