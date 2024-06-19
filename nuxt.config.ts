@@ -21,4 +21,10 @@ export default defineNuxtConfig({
       enabled: true
     }
   },
+  modules: [
+    '@nuxt/content'
+  ],
+  content: {
+    // ... options
+  }
 })
