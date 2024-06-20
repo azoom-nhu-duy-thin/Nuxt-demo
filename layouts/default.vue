@@ -2,8 +2,7 @@
 </script>
 
 <template>
-    <div class="container bg-gray-300">
-        <p>Default layout</p>
+    <div class="h-screen">
         <slot />
     </div>
 </template>

@@ -95,3 +95,40 @@ npx tailwindcss init
                 autoprefixer: {},
             },
         },
+        
+npx nuxi@latest module add pinia
+
+npx nuxi@latest module add ant-design-vue
+
+yarn add @nuxt/ui-pro
+
+
+yarn add ant-design-vue @ant-design/icons-vue unplugin-vue-components --save
+
+=> Add it into the nuxt.config file // nuxt.config.ts
+
+import { defineNuxtConfig } from 'nuxt'
+import Components from 'unplugin-vue-components/vite';
+import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
+
+export default defineNuxtConfig({
+  vite: {
+    plugins: [
+      Components({
+        // add option {resolveIcons: true} as parameter for resolving problem with icons
+        resolvers: [AntDesignVueResolver({resolveIcons: true})],
+      }),
+    ],
+    // @ts-expect-error: Missing ssr key
+    ssr: {
+      noExternal: ['moment', 'compute-scroll-into-view', 'ant-design-vue','@ant-design/icons-vue'],
+    },  
+  },
+})
+
+--------------------------------------
+
+yarn add @nuxtjs/axios
+
+yarn add  ofetch --save-dev
+
